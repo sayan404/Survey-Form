@@ -1,4 +1,3 @@
-
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Dialog from '@mui/material/Dialog';
@@ -27,11 +26,9 @@ const QuestionAnswer = () => {
       },
     ]);
 
-    if (currentQuestionIndex + 1 < questionsData.length) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-    } else {
+    if (currentQuestionIndex + 1 === questionsData.length) {
       setConfirmationOpen(true);
-    }
+    } 
   };
   const handleConfirmationClose = (confirmed) => {
     if (!confirmed) {
